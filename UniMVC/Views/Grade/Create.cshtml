@@ -1,0 +1,43 @@
+﻿@model StudentGrades
+
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Add Grade</h2>
+            <hr />
+        </div>
+        <div class="mb-3 row p-1">
+            <label class="p-0">Student</label>
+            <select asp-for="StudentId" asp-items="ViewBag.Students" class="form-select">
+                <option disabled selected>Select Student</option>
+            </select>
+        </div>
+
+        <div class="mb-3 row p-1">
+            <label class="p-0">Discipline</label>
+            <select asp-for="DisciplineId" asp-items="ViewBag.Disciplines" class="form-select">
+                <option disabled selected>Select Student</option>
+            </select>
+        </div>
+
+        <div class="mb-3 row p-1">
+            <label class="p-0">Grade</label>
+            <input asp-for="Grade" class="form-control" />
+        </div>
+
+
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">Add</button>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <a asp-controller="Grade" asp-action="Index" class="btn btn-outline-secondary border form-control">
+                    Back to list
+                </a>
+            </div>
+        </div>
+
+    </div>
+</form>

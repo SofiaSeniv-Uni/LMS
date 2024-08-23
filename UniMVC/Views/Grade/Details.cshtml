@@ -1,0 +1,33 @@
+﻿@model Teacher
+
+<div class="border p-3 mt-4">
+    <div class="row pb-2">
+        <h2 class="text-primary">Teacher Info</h2>
+        <hr />
+    </div>
+    <div class="mb-3 row p-1">
+        <label class="p-0">Name</label>
+        <input asp-for="Name" />
+    </div>
+    <div class="mb-3 row p-1">
+        <label class="p-0">Surname</label>
+        <input asp-for="Surname" />
+    </div>
+    <div class="mb-3 row p-1">
+        <label class="p-0">Email</label>
+        <input asp-for="Email"/>
+    </div>
+    <div class="mb-3 row p-1">
+        <label class="p-0">Position</label>
+        <input asp-for="Position" />
+    </div>
+
+
+    <div class="row">
+        <div class="col-6 col-md-3">
+            <a asp-controller="Teacher" asp-action="Index" class="btn btn-outline-secondary border form-control">
+                Back to list
+            </a>
+        </div>
+    </div>
+</div>

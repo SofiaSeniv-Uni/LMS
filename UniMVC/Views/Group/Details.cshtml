@@ -1,0 +1,19 @@
+﻿@model Group
+
+<h2>@Model.Name</h2>
+
+<p>Student list:</p>
+<ul>
+    @foreach (var student in Model.Students)
+    {
+        <li>@student.Name @student.Surname</li>
+    }
+</ul> 
+
+<div class="row">
+    <div class="col-6 col-md-3">
+        <a asp-controller="Group" asp-action="Index" class="btn btn-outline-secondary border form-control">
+            Back to list
+        </a>
+    </div>
+</div> 
